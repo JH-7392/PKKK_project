@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 	<head>
 		<meta charset="utf-8">
 		<title>먹어도 되개냥? &mdash; KaKaO(조)</title>
@@ -54,8 +54,8 @@
 				<header class="col-xs-12 text-center">
 					<div class='logo'>
 						<a href="#"><img src ="images/catdoglogo2.png"></a>
-						<h1><p style="font-family:NanumBarunpenB;">
-						Providing the right way to eat and staying healthy with your pet</h1></p>	
+						<h1><p style="font-family:NanumBarunpenB; font-size:8vw;">
+						Providing the right way to eat and staying healthy with your pet</p></h1>
 					</div>
 				</header>
 			</div>
@@ -128,9 +128,11 @@
 		<div class="container">	
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<h1><p style="font-family:NanumBarunpenB;">Analysis</h1></p>
+					<h1><p style="font-family:NanumBarunpenB;">Analysis</p></h1>
 				</div>			
 				<div class="col-md-12">
+					You uploaded "pic-prediction".
+					This "food" is "edible-result" to your "pet".
 					<form action="contact.php" method="post" id="contact_form" class="contact_form">
 						<fieldset>
 							<div class="col-sm-6"><input type="text" id="name" placeholder="Name" onFocus="if(!this._haschanged){this.value=''};this._haschanged=true;" /></div>
@@ -209,16 +211,17 @@
 						<h3>
 							If you don't have a picture, Search here.</h3>
 
-						<form class = 'search'>
+						<form class = 'search' action="here-comes-action">
 							<input class ="keyword" type="text" name='search' maxlength= 255 value="" autocomplete = "off">
 							
 							<select class = "SelectSearch" name = "WhichSearch">
 								<option id = 'google' value = 'google'>Google</option>
 								<option id = 'naver' value = 'never'>Naver</option>
+							</select>
+							<br/>
 							<button class = "img-button" type="submit" name="click" value="">
 								<i class="fas fa-search fa-4x"></i>
 							</button>
-							</select>
 						</form>
 					</div>
 				</div>

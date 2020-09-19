@@ -1,4 +1,4 @@
-conset Searching = Search.prototype;
+const Searching = Search.prototype;
 
 function Search(){
     this.keyword = document.querySelector('input[name="search"]');
@@ -16,10 +16,10 @@ Searching.Engine = function(){
         let keyword = this.keyword.value;
 
         if(engine === 'google'){
-            location.herf='https://www.google.co.kr/search?q='+keyword;
+            location.href='https://www.google.co.kr/search?q='+keyword;
          }
          else if(engine === 'naver'){
-             location.herf = 'https://search.naver.com/search.naver?query=' + keyword;
+             location.href = 'https://search.naver.com/search.naver?query=' + keyword;
          }
      });
  }
