@@ -61,12 +61,12 @@
 
 /* Main Items */
 .bg-left a{
-	background: url(../images/background/05.jpg) no-repeat center center;
+	background: url(../static/images/background/05.jpg) no-repeat center center;
 	background-size: 100%;
 	margin: 0 0 30px;
 }
 .bg-right a{
-	background: url(../images/background/02.jpg) no-repeat center center;
+	background: url(../static/images/background/02.jpg) no-repeat center center;
 	background-size: 100%;
 	margin: 0 0 30px;
 }
@@ -205,10 +205,10 @@ hr {
 	margin-left: 5px;
 }
 
-.left{background: url(../images/background/05.jpg) no-repeat center center; background-size: 75px;}
-.right{background: url(../images/background/02.jpg) no-repeat center center; background-size: 75px;}
+.left{background: url(../static/images/background/05.jpg) no-repeat center center; background-size: 75px;}
+.right{background: url(../static/images/background/02.jpg) no-repeat center center; background-size: 75px;}
 
 .trs{height:30px; width:60px; float:left;}
-.tr{background: url(../images/background/03.jpg) no-repeat center center; background-size: 75px;}
+.tr{background: url(../static/images/background/03.jpg) no-repeat center center; background-size: 75px;}
 
 /*============== panel ===============*/

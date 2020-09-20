@@ -1,0 +1,277 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>먹어도 되개냥? &mdash; KaKaO(조)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="keywords" content="some keywords that best describe your business">
+        <meta name="description" content="a short description of your company">
+        <meta name="author" content="SRPACDY">
+        
+        <!-- Mobile Specific Metas
+        ================================================== -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- CSS
+        ================================================== -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{% static 'css/layout.css' %}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{% static 'css/background.css' %}" type="text/css" media="screen">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" type="text/css" media="screen">
+        
+    
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+        <link rel="stylesheet" href="{% static 'fonts/NanumBarunpenB/NanumBarunpenB.css' %}">
+        <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+        <!-- Favicons
+        ================================================== -->
+        <link rel="shortcut icon" href="{% static 'images/icon.ico' %}">
+
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+        
+
+    </head>
+    <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section">
+    
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f6466e3577e7c47"></script>
+        <script type="text/javascript" src="{% static 'js/Search.js' %}" charset="utf-8"></script>
+
+    
+    <!-- Primary Page Layout
+    ====================================================================== -->
+    <div class="header bg">
+        <div class="container">
+            <div class="row">
+                <header class="col-xs-12 text-center">
+                    <div class='logo'>
+                        <a href="#">
+                            <img src ="{% static 'images/catdoglogo2.png' %}"></a>
+                        <h1 style="font-family:NanumBarunpenB; font-size:8vw;"><p>
+                        Providing the right way to eat and staying healthy with your pet</p></h1>
+                    </div>
+                </header>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="down">
+                        <a href="#about" class="smooth"><i class="fa fa-angle-down fa-3x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 먹어도 되개냥 position -->
+    <div class="about" id='aout'>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10 text-center">
+                    <div class="about-content">
+                        <h2>
+                        <p style="font-family:NanumBarunpenB;" style="font-weight:bold;">
+                            Welcome to '먹어도 되개냥' </h2></p>
+                        <p style="font-family:NanumBarunpenB;"> Would our pets eat the ingredients we eat? Check it out in here!</p>
+                    </div>				
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- features position -->
+    <div class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="features-content">
+                        <header>
+                            <h2><p style="font-family:NanumBarunpenB;">
+                                Today, What kind of snack would you like to give your pet?
+                            </p></h2>
+                        
+                            <!-- photo & image position  -->
+                        </header>
+                        <div class ="grid clearfix">
+                            <div class="col-sm-6 text-center">
+                                <i class="fa fa-mobile fa-5x"></i>
+                                <b>Photo shoot</b>
+                                <p style="font-family:NanumBarunpenB;"> Click the photo icon and Take a ingredients picture </p>
+                                <label class="btn btn-primary btn-file"> Photo Shoot 
+                                    <input style="display: none;" type="file" accept="image/*" capture="camera">
+                                </label>
+                            </div>
+                            <div class="col-sm-5 text-center">
+                                <i class="fa fa-picture-o fa-4x"></i>
+                                <b> Add Image</b>
+                                <p style="font-family:NanumBarunpenB;"> Click the Upload button and add image</p>
+                                <label class="btn btn-primary btn-file"> Add image
+                                    <input style="display: none;" type="file" >
+                                </label>
+                            </div>
+                        </div>
+                        </div>
+                    </div>				
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- contact bg position -->
+    <div class="contact bg">
+        <div class="container">	
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1><p style="font-family:NanumBarunpenB;">Analysis</p></h1>
+                </div>			
+                <div class="col-md-12">
+                    You uploaded "pic-prediction".
+                    This "food" is "edible-result" to your "pet".
+                    <form action="contact.php" method="post" id="contact_form" class="contact_form">
+                        <fieldset>
+                            <div class="col-sm-6"><input type="text" id="name" placeholder="Name" onFocus="if(!this._haschanged){this.value=''};this._haschanged=true;" /></div>
+                            <div class="col-sm-6"><input type="text" id="email" placeholder="Email" onFocus="if(!this._haschanged){this.value=''};this._haschanged=true;" /></div>
+                            <div class="col-xs-12"><textarea id="msg" cols="20" rows="3" placeholder="Message" onFocus="if(!this._haschanged){this.value=''};this._haschanged=true;"></textarea></div>
+                            <div class="col-xs-12 text-center">
+                            <input type="submit" value="Subscribe" id="contact_submit" />
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- social position -->
+    <div class="social">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="social-content">
+                        <h2><p style="font-family:NanumBarunpenB;"> 
+                        Team member</h2></p>
+                        <div class="grid clearfix">
+                            <div class="col-sm-3 text-center">
+                                <figure>
+                                <img src="{% static 'images/001.png' %}" alt="Image" class="img-fluid">	
+                                </figure>
+                                <p style="font-family:NanumBarunpenB;">Ji-Hyang Park</p>
+                            </div>
+                            <div class="col-sm-3 text-center">
+                                <figure>
+                                <img src="{% static 'images/002.png' %}" alt="Image" class="img-fluid">	
+                                </figure>
+                                <p style="font-family:NanumBarunpenB;">Chae-ri Kim</p>
+                            </div>
+                            <div class="col-sm-3 text-center">
+                                <figure>
+                                <img src="{% static 'images/003.png' %}" alt="Image" class="img-fluid">	
+                                </figure>
+                                <p style="font-family:NanumBarunpenB;">Hakjun Kim</p>
+                            </div>
+                            <div class="col-sm-3 text-center">
+                                <figure>
+                                <img src="{% static 'images/004.png' %}" alt="Image" class="img-fluid">	
+                                </figure>
+                                <p style="font-family:NanumBarunpenB;">Yoon-mi Kim</p>
+                            </div>
+
+                            
+                            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                            <div class="addthis_inline_share_toolbox"></div>
+                            <!---
+                            <div class="socmed">
+                            
+            
+                                <a href="https://creativemarket.com/SRPACDY" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+                                <a href="https://creativemarket.com/SRPACDY" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                                <a href="https://creativemarket.com/SRPACDY" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>	
+                                <a href="https://creativemarket.com/SRPACDY" target="_blank"><i class="fa fa-flickr fa-2x"></i></a>
+                            </div>-->
+                        </div>				
+                    </div>				
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search position -->
+    <div class="subscribe" id="subscribe">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 text-center">
+                    <div class="subscribe-form">
+                        <h3>
+                            If you don't have a picture, Search here.</h3>
+
+                        <form class='search' method="get" target="_blank">
+                            <select class = "SelectSearch" name = "engine">
+                                <option id = 'google' value = 'google'>Google</option>
+                                <option id = 'naver' value = 'naver'>Naver</option>
+                            </select>
+
+                            <input id="search" class="keyword" type="text" name='keyword' maxlength= 255 value="{{ search_string }}" autocomplete = "off" placeholder="Search here">
+                            <input type="submit" value="Search">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer position -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">				
+                    <div class="copy">
+                    <p style="font-family:NanumBarunpenB;"> Thank You.&copy;2020 
+                    <a href="https://creativemarket.com/SRPACDY" target="_blank">KaKaO(조)
+                    </a></div></div></div>			
+            </div>
+        </div>
+    </div>
+
+        <!-- JS
+        ================================================== -->
+        
+        <script type="text/javascript" src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/scroll.js' %}" charset="utf-8"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.countdown.js' %}" charset="utf-8"></script>
+        <script type="text/javascript" src="{% static 'js/countdown.js' %}" charset="utf-8"></script>
+        <script type="text/javascript" src="{% static 'js/supersized.3.2.7.js' %}" charset="utf-8"></script>
+        <script type="text/javascript" src="{% static 'js/images.js' %}" charset="utf-8"></script>
+        <script type="text/javascript" src="{% static 'js/form.js' %}" charset="utf-8"></script>
+        
+
+
+
+        <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <script src="{% static 'js/jquery-ui.js' %}"></script>
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+        <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+        <script src="{% static 'js/aos.js' %}"></script>
+        <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+        <script src="{% static 'js/jquery.sticky.js' %}"></script>
+        <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+
+        <!-- End Document
+        ================================================== -->
+
+    </body>
+
+</html>
