@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from .forms import UploadForm
 
@@ -10,7 +10,7 @@ import numpy as np
 
 # Create your views here.
 def index(request):
-    return render(request, 'check_edible/index.html', {})
+    return render(request, 'check_edible/base.html', {})
 
 
 def upload(request):
@@ -22,7 +22,7 @@ def upload(request):
 
             form.save() 
 
-            UserInput.objects.create(pet_type=pet_type, food_image=food_image)
+            # UserInput.objects.create(pet_type=pet_type, food_image=food_image)
             return redirect('result', {'pet_type': pet_type, 'food_image': food_image})
     else:
         form = UploadForm()

@@ -1,13 +1,73 @@
-{% comment %} {% extends "base_generic.html" %} {% endcomment %}
+{% extends 'check_edible/base.html' %} {% block uploadform %}
 
-{% block uploadform %}
-<h2>User fill this form</h2>
+<div class="features">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <div class="features-content">
+          <!-- user input form goes below -->
+          <h2 style="font-family: NanumBarunpenB">
+            Today, What kind of snack would you like to give your pet?
+          </h2>
+          <div class="grid clearfix">
+            <form action="{% url 'check_edible:result' %}" method="post" enctype="multipart/form-data">
+              {% csrf_token %} {{ form.as_p }}
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<form action="{% url 'check_edible:result' %}" method="post" enctype="multipart/form-data">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button typ="submit">Submit</button>
-</form>
+<!-- Search position -->
+<div class="subscribe" id="subscribe">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <div class="subscribe-form">
+          <h3>If you don't have a picture, Search here.</h3>
 
+          <form action="search" class="search" method="get" target="_blank">
+            <select class="SelectSearch" name="engine">
+              <option id="google" value="google">Google</option>
+              <option id="naver" value="naver">Naver</option>
+            </select>
 
-{% endblock %}
+            <input id="search" class="keyword" type="text" name="keyword" maxlength="255" value="{{ search_string }}"
+              autocomplete="off" placeholder="Search here" />
+            <input type="submit" value="Search" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %} {% comment %}
+<div class="col-sm-6 text-center">
+  <i class="fa fa-mobile fa-5x"></i>
+  <b>Photo shoot</b>
+  <p style="font-family: NanumBarunpenB">
+    Click the photo icon and Take a ingredients picture
+  </p>
+  <label class="btn btn-primary btn-file">
+    Photo Shoot
+    <input style="display: none" type="file" accept="image/*" capture="camera" />
+  </label>
+</div>
+
+<div class="col-sm-5 text-center">
+  <i class="fa fa-picture-o fa-4x"></i>
+  <b> Add Image</b>
+  <p style="font-family: NanumBarunpenB">
+    Click the Upload button and add image
+  </p>
+
+  <label class="btn btn-primary btn-file">
+    Add image
+    <input style="display: none" type="file" />
+  </label>
+</div>
+{% endcomment %}

@@ -1,15 +1,14 @@
 from django.db import models
 from django import forms
-from .models import UserInput
 
-class UploadForm(forms.ModelForm):
-    class Meta: 
-        model = UserInput 
-        fields = ['pet_type', 'food_image'] 
+class UploadForm(forms.Form):
+    CHOICES=[('dog','dog'), ('cat','cat')]
+    attrs_radio_button = {'class': 'radio-control', }
+    attrs_image_button = {'class': 'image-control', }
 
-
-#     pet_type = forms.CharField(
-#          max_length=100, label='pet type',
-#          widget=forms.TextInput(attrs={}))
+    pet_type = forms.ChoiceField(
+        widget=forms.RadioSelect(attrs=attrs_radio_button), 
+        choices=CHOICES, 
+        label="What kind of pet do you live with?")
         
-#     food_image = forms.ImageField(label="Food image")
+    food_image = forms.ImageField(label="Upload food pic to check edible.")
