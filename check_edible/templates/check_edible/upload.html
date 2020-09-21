@@ -1,0 +1,13 @@
+{% comment %} {% extends "base_generic.html" %} {% endcomment %}
+
+{% block uploadform %}
+<h2>User fill this form</h2>
+
+<form action="{% url 'check_edible:result' %}" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button typ="submit">Submit</button>
+</form>
+
+
+{% endblock %}
