@@ -5,7 +5,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>먹어도 되개냥? &mdash; KaKaO(조)</title>
+  <title>먹어도 되개냥? &mdash; CaCaO(조)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
   <meta name="keywords" content="some keywords that best describe your business" />
   <meta name="description" content="a short description of your company" />
@@ -17,6 +17,7 @@
 
   <!-- CSS
         ================================================== -->
+        
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" type="text/css" media="screen" />
   <link rel="stylesheet" href="{% static 'css/bootstrap-theme.css' %}" type="text/css" media="screen" />
   <link rel="stylesheet" href="{% static 'css/layout.css' %}" type="text/css" media="screen" />
@@ -32,18 +33,36 @@
   <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}" />
   <link rel="stylesheet" href="{% static 'fonts/NanumBarunpenB/NanumBarunpenB.css' %}" />
   <link rel="stylesheet" href="{% static 'css/aos.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/tooptip.css' %}" />
 
   <!-- Favicons
         ================================================== -->
   <link rel="shortcut icon" href="{% static 'images/icon.ico' %}" />
-
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Popover -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+.radio-control {
+  font-size: 2em;
+}
+.image-control {
+  overflow: auto;
+}
+</style>
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" id="home-section">
+
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f6466e3577e7c47"></script>
   <script type="text/javascript" src="{% static 'js/Search.js' %}" charset="utf-8"></script>
+
+
 
   <!-- Primary Page Layout
     ====================================================================== -->
@@ -51,23 +70,13 @@
     <div class="container">
       <div class="row">
         <header class="col-xs-12 text-center">
-          <div class="logo">
-            <a href="#">
-              <img src="{% static 'images/catdoglogo2.png' %}" /></a>
-            <h1 style="font-family: NanumBarunpenB; font-size: 8vw">
-              <p>
-                Providing the right way to eat and staying healthy with your pet
-              </p>
-            </h1>
+          <div class="logo" style="margin-bottom:auto;">
+            <a href="upload"><img src="{% static 'images/catdoglogo2.png' %}" /></a>
           </div>
+          <p><h1 style="font-family: NanumBarunpenB; font-size: 5vw">
+              Providing the right way to eat and staying healthy with your pet
+            </h1></p>
         </header>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 text-center">
-          <div class="down">
-            <a href="#about" class="smooth"><i class="fa fa-angle-down fa-3x"></i></a>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -92,16 +101,19 @@
     </div>
   </div>
 
-  
 
-{% block uploadform %}
-            {% endblock %}
-  
 
-{% block result %}
-{% endblock %}
-  
-  
+
+
+
+  {% block uploadform %}
+  {% endblock %}
+
+
+  {% block result %}
+  {% endblock %}
+
+
 
   <!-- social position -->
   <div class="social">
@@ -112,35 +124,34 @@
             <h2>
               <p style="font-family: NanumBarunpenB">Team member</p>
             </h2>
-            <div class="grid clearfix">
+            <div class="grid clearfix" style="padding-bottom: 40px;">
               <div class="col-sm-3 text-center">
                 <figure>
-                  <img src="{% static 'images/001.png' %}" alt="Image" class="img-fluid" />
+                  <img src="{% static 'images/profile/001.png' %}" alt="Image" class="img-fluid" />
                 </figure>
                 <p style="font-family: NanumBarunpenB">Ji-Hyang Park</p>
               </div>
               <div class="col-sm-3 text-center">
                 <figure>
-                  <img src="{% static 'images/002.png' %}" alt="Image" class="img-fluid" />
+                  <img src="{% static 'images/profile/002.png' %}" alt="Image" class="img-fluid" />
                 </figure>
                 <p style="font-family: NanumBarunpenB">Chae-ri Kim</p>
               </div>
               <div class="col-sm-3 text-center">
                 <figure>
-                  <img src="{% static 'images/003.png' %}" alt="Image" class="img-fluid" />
+                  <img src="{% static 'images/profile/003.png' %}" alt="Image" class="img-fluid" />
                 </figure>
                 <p style="font-family: NanumBarunpenB">Hakjun Kim</p>
               </div>
               <div class="col-sm-3 text-center">
                 <figure>
-                  <img src="{% static 'images/004.png' %}" alt="Image" class="img-fluid" />
+                  <img src="{% static 'images/profile/004.png' %}" alt="Image" class="img-fluid" />
                 </figure>
                 <p style="font-family: NanumBarunpenB">Yoon-mi Kim</p>
               </div>
-
-              <!-- Go to www.addthis.com/dashboard to customize your tools -->
-              <div class="addthis_inline_share_toolbox"></div>
             </div>
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+            <div class="addthis_inline_share_toolbox"></div>
           </div>
         </div>
       </div>
@@ -189,9 +200,18 @@
   <script src="{% static 'js/jquery.sticky.js' %}"></script>
   <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
   <script src="{% static 'js/main.js' %}"></script>
+  
+  
+  <!-- Popover script -->
+  <script>
+  $(function(){$('[data-toggle="popover"]').popover()})
+  $('button#').on('click', function(e) {e.preventDefault(); return true;});
+  </script>
+
 
   <!-- End Document
         ================================================== -->
+
 </body>
 
 </html>

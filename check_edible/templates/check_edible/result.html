@@ -1,21 +1,64 @@
-{% extends 'check_edible/base.html' %} 
-
+{% extends 'check_edible/base.html' %}
+{% load static %}
 {% block result %}
+
 <div class="contact bg">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <h1>
-          <p style="font-family: NanumBarunpenB">Analysis</p>
-        </h1>
-      </div>
-      <div class="col-md-12">
-        type: "{{ pet_type }}" <br />
-        img: "{{ food_image }}" <br />
-        pred: "{{ food_type }}" <br />
-        edible: "{{ is_edible }}" <br />
-      </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>
+                    <p style="font-family: NanumBarunpenB; padding-bottom: 1.25em">Analysis</p>
+                </h1>
+            </div>
+            <div class="col-md-12">
+                <div class="col-sm-3 text-center"
+                    style="font-family: NanumBarunpenB; text-align: center; font-size:1.25em; padding-bottom: 15px;">
+                    <p><b>Your pet</b></p>
+                    {% if pet_type == "cat" %}
+                    <img src="{% static 'images/pets/cat.png' %}" width="150" height="150" />
+                    {% elif pet_type == "dog" %}
+                    <img src="{% static 'images/pets/dog.png' %}" width="150" height="150" />
+                    {% endif %}
+                </div>
+                <div class="col-sm-3 text-center"
+                    style="font-family: NanumBarunpenB; text-align: center; font-size:1.25em; padding-bottom: 15px;">
+                    <p><b>Food: {{ kor_name }}</b></p>
+                    {% if food_type == "almond" %}
+                    <img src="{% static 'images/foods/almond.png' %}" width="150" height="150" />
+                    {% elif food_type == "apple" %}
+                    <img src="{% static 'images/foods/apple.png' %}" width="150" height="150" />
+                    {% elif food_type == "broccoli" %}
+                    <img src="{% static 'images/foods/broccoli.png' %}" width="150" height="150" />
+                    {% elif food_type == "carrot" %}
+                    <img src="{% static 'images/foods/carrot.png' %}" width="150" height="150" />
+                    {% elif food_type == "grape" %}
+                    <img src="{% static 'images/foods/grape.png' %}" width="150" height="150" />
+                    {% elif food_type == "mandarin" %}
+                    <img src="{% static 'images/foods/mandarin.png' %}" width="150" height="150" />
+                    {% elif food_type == "melon" %}
+                    <img src="{% static 'images/foods/melon.png' %}" width="150" height="150" />
+                    {% elif food_type == "onion" %}
+                    <img src="{% static 'images/foods/onion.png' %}" width="150" height="150" />
+                    {% elif food_type == "welshOnion" %}
+                    <img src="{% static 'images/foods/welshOnion.png' %}" width="150" height="150" />
+                    {% endif %}
+                </div>
+                <div class="col-sm-3 text-center"
+                    style="font-family: NanumBarunpenB; text-align: center; font-size:1.25em; padding-bottom: 15px;">
+                    <p><b>Is it edible?</b></p>
+                    {% if is_edible %}
+                    <img src="{% static 'images/true.png' %}" width="150" height="150" />
+                    {% else %}
+                    <img src="{% static 'images/false.png' %}" width="150" height="150" />
+                    {% endif %}
+                </div>
+            </div>
+
+            
+        </div>
+        <div style="font-family: NanumBarunpenB; font-size:1.5em; text-align: center; padding-top: 10px;">
+                <strong>{{ precaution }}</strong></div>
     </div>
-  </div>
 </div>
+
 {% endblock %}
