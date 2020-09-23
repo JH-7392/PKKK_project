@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '(p*vgp_sdb^ula$#jhv9c*a!xm-1908+g8voz+o&(pan%ey1d41)w')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 # bool( os.environ.get('DJANGO_DEBUG', True) )
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'check_edible',
+    'check_edible.apps.CheckEdibleConfig',
 ]
 
 MIDDLEWARE = [
@@ -82,12 +82,17 @@ WSGI_APPLICATION = 'gaenyang.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'djangogirls',
-        'USER': 'name',
+        'NAME': 'gaenyang',
+        'USER': 'admin',
         'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '',
-    }
+    },
+
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # },
 }
 
 db_from_env = dj_database_url.config(conn_max_age=500)
