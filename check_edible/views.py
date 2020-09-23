@@ -43,8 +43,8 @@ def result(request):
         'melon': '참외', 
         'onion': '양파',
         'welshOnion': '대파' }
-    cat = [False, True, False, True, True, False, True, True, False]
-    dog = [False, True, False, True, True, False, True, True, False]
+    cat = [False, True, True, True, False, True, True, False, False]
+    dog = [False, True, True, True, False, True, True, False, False]
     edible_table = pd.DataFrame(index=fruits, columns = ['dog', 'cat'])
     edible_table['dog'] = dog
     edible_table['cat'] = cat
